@@ -36,6 +36,25 @@ Codex reads project and global guidance from `AGENTS.md`. Copy the contents of [
 
 Use the global option if you want the behavior across projects; use the project option if you only want it for selected work.
 
+### Claude Code
+
+Claude Code uses the same `SKILL.md` format. Install it for every project on your machine:
+
+```bash
+git clone https://github.com/CuriousPaul/deskilling-guard.git
+mkdir -p ~/.claude/skills/deskilling-guard
+cp deskilling-guard/SKILL.md ~/.claude/skills/deskilling-guard/SKILL.md
+```
+
+Or make it available only in one repository:
+
+```bash
+mkdir -p .claude/skills/deskilling-guard
+cp /path/to/deskilling-guard/SKILL.md .claude/skills/deskilling-guard/SKILL.md
+```
+
+Start or refresh Claude Code, then invoke `/deskilling-guard` directly or ask for work that matches the skill description. Claude Code can also load relevant skills automatically. See the [official Claude Code skills documentation](https://code.claude.com/docs/en/skills).
+
 ## How it behaves
 
 | Situation | Behavior |
@@ -117,6 +136,25 @@ Codex는 전역 또는 프로젝트의 `AGENTS.md` 지침을 읽는다. [`integr
 
 - 전역 Codex 지침: 모든 프로젝트에 적용
 - 특정 프로젝트 루트의 `AGENTS.md`: 그 프로젝트에만 적용
+
+### Claude Code
+
+Claude Code도 같은 `SKILL.md` 형식을 사용하므로 그대로 설치할 수 있다. 모든 프로젝트에서 쓰려면:
+
+```bash
+git clone https://github.com/CuriousPaul/deskilling-guard.git
+mkdir -p ~/.claude/skills/deskilling-guard
+cp deskilling-guard/SKILL.md ~/.claude/skills/deskilling-guard/SKILL.md
+```
+
+한 프로젝트에서만 쓰려면 해당 저장소 루트에서:
+
+```bash
+mkdir -p .claude/skills/deskilling-guard
+cp /path/to/deskilling-guard/SKILL.md .claude/skills/deskilling-guard/SKILL.md
+```
+
+Claude Code를 시작하거나 새로고침한 뒤 `/deskilling-guard`로 직접 실행하거나, 스킬 설명과 맞는 작업을 요청하면 된다. Claude Code는 관련 스킬을 자동으로 불러올 수도 있다. 자세한 경로 규칙은 [Claude Code 공식 Skills 문서](https://code.claude.com/docs/en/skills)를 참고하면 된다.
 
 ## 동작 방식
 
